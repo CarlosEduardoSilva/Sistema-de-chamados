@@ -17,14 +17,8 @@ public class ChamadosEntity extends BaseEntity<Long>{
 	private String chaDesc;
 
 	public ChamadosEntity() {
-			
-		
+		super();
 	}
-	
-	
-	
-	
-	
 	public ChamadosEntity(String chaDesc) {
 		super();
 		this.chaDesc = chaDesc;

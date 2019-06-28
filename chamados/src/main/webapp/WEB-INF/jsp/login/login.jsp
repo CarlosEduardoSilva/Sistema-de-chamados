@@ -7,7 +7,6 @@
 	<c:import url="../../../resources/base/base-login.jsp"></c:import>
 	
 	<meta charset="utf-8">
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
 
 <main class="login-form">
@@ -59,7 +58,3 @@
     </div>
 
 </main>
-
-
-
-<c:import url="footerSimples.jsp"></c:import>

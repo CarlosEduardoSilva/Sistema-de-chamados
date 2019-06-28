@@ -20,4 +20,12 @@ public class MainController {
 		return "login/login";
 	}
 	
+	@RequestMapping("/registrar")
+	public String paginaRegistrar (HttpSession session) {
+		
+		session.invalidate();
+		this.LOGGER.info("Chamada da pagina Registrar");
+		return "registrar/registrar";
+	}
+	
 }
