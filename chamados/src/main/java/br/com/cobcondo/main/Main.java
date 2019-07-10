@@ -8,13 +8,13 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 import br.com.cobcondo.main.utils.AppContext;
 
 @SpringBootApplication
-public class AppMain extends SpringBootServletInitializer{
+public class Main extends SpringBootServletInitializer{
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(AppContext.class);
 	}
 	public static void main(String[] args) {
-		SpringApplication.run(AppMain.class, args);
+		SpringApplication.run(Main.class, args);
 	}
 
 }

@@ -58,14 +58,13 @@
    							 <label for="perguntaSecreta" class="col-md-4 col-form-label text-md-right">Pergunta secreta </label>
    							 	<div class= col-md-6>	
    							 		<select class="form-control " id="perguntaSecreta">
-      									<option>1</option>
-      									<option>2</option>
-      									<option>3</option>
-      									<option>4</option>
-    									<option>5</option>
+   							 		<c:forEach var="p" items="${perg}">
+      									<option value="${p.id}">${p.pergunta}</option>
+      								</c:forEach>   									
     								</select>
   						    	</div>
-  						    </div>
+  						    </div>		    
+  			
   						    
   						    <div class="form-group row">
                                 <label for="resposta" class="col-md-4 col-form-label text-md-right" placeholder="">Resposta </label>

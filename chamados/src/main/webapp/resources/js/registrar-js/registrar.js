@@ -6,9 +6,9 @@ $(document).ready(function(){
 		email = $('#email').val();
 		senha = $('#senha').val();
 	    confirmarSenha = $('#confirmarSenha').val();	    
-	    empId = $('#empId');
-	    pergunta = $('#perguntaId').val();
-	    resposta = $('#perResposta').val();
+	    pergunta = $('#perguntaSecreta').val();
+	    resposta = $('#resposta').val();
+	   
 		
 	    if(nomeval !=""){
 	    	if(usuario !=""){
@@ -18,16 +18,20 @@ $(document).ready(function(){
 	    			    	$.ajax({
 	    						url: "nvregistro", 
 	    						type:"POST",
-	    						data:{pin:pin, nome:nomeval, usu:usuario, email:email, senha:senha, empId:empId, pergunta:pergunta, reposta:resposta},
+	    						data:{pin:pin, nome:nomeval, usu:usuario, email:email, senha:senha, pergunta:pergunta, reposta:resposta},
 
 	    						success: function(result){
 	    					    if(result == "OK"){
-//	    					    	console.log("Usuario salvo com sucesso");	
+//	    					    	
 	    					    	swal("Registro","Usuario Registrado","success");
-//	    					    	alert('Cadastrado com sucesso');
-	    					    }else{
-//	    					    	console.log("Problemas ao gravar usuario");
-//	    					    	alert('Erro ao cadastrar');
+//	    					    	
+	    					    }if(result == "pinU"){
+//	    					    	
+	    					    	swal("Registro","Pin já utilizado","error");
+	    					    }if(result == "pinI"){
+	    					    	swal("Registro","Pin Inexistente!","error");
+	    					    	
+	    					    }if(result == "error"){
 	    					    	swal("Registro","Usuario Não Registrado","error");
 	    					    }
 	    					  }});
@@ -37,22 +41,22 @@ $(document).ready(function(){
 	    					swal("Registro","Senhas divergentes","error");
 	    				}
 	    			}else{
-	    				alert("Campo Resposta vazio!!");
+	    				//alert("Campo Resposta vazio!!");
     					swal("Registro","Campo Resposta vazio","error");
 	    				
 	    			}
 	    		}else{
-	    			alert("E-mail invalido!!");
+	    			//alert("E-mail invalido!!");
 					swal("Registro","E-mail invalido","error");
 	    			
 	    		}
 	    	}else{
-	    		alert("Campo Usuario vazio!!");
+	    		//alert("Campo Usuario vazio!!");
 				swal("Registro","Campo Usuario vazio","error");	    		
 	    	}
 	    	
 	    }else{
-	    	alert("Campo Nome vazio!!");
+	    	//alert("Campo Nome vazio!!");
 			swal("Registro","Campo Nome vazio","error");	    		
 	    }  
 
