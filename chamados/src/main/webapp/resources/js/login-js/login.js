@@ -14,10 +14,10 @@ $(document).ready(function(){
 					data:{usu:usuario, senha:senha},
 
 					success: function(result){
-						alert(result);
+						
 				    if(result == "/dashboard"){
 //				    	
-				    	
+				    	swal("Login","Logou","success");	 
 				    	window.location= result;
 				    	
 //				    	

@@ -13,71 +13,73 @@ import br.com.cobcondo.main.utils.BaseEntity;
 public class ChamadosEntity extends BaseEntity<Long>{
 	
 	
-	
-
-	public ChamadosEntity(String usu_nome, Long emp_id, Long cat_id, Long sub_id, String cha_titulo,
-			String cha_descricao) {
+	public ChamadosEntity(Long usuId, Long empId, Long catId, Long subId, String chaTitulo, String chaDescricao) {
 		super();
-		this.usu_nome = usu_nome;
-		this.emp_id = emp_id;
-		this.cat_id = cat_id;
-		this.sub_id = sub_id;
-		this.cha_titulo = cha_titulo;
-		this.cha_descricao = cha_descricao;
+		this.usuId = usuId;
+		this.empId = empId;
+		this.catId = catId;
+		this.subId = subId;
+		this.chaTitulo = chaTitulo;
+		this.chaDescricao = chaDescricao;
 	}
+	public ChamadosEntity() {
+		
+		super();		
+	}
+
+	
 	private static final long serialVersionUID =1L;
 	
-	@Column(name="usu_nome", nullable = false )
-	private String usu_nome;	
+	@Column(name="usu_id", nullable = false )
+	private Long usuId;	
 	@Column(name="emp_id", nullable = false )
-	private Long emp_id;
+	private Long empId;
 	@Column(name="cat_id", nullable = false )
-	private Long cat_id;
+	private Long catId;
 	@Column(name="sub_id", nullable = false )
-	private Long sub_id;
+	private Long subId;
 	@Column(name="cha_titulo", length=45, nullable = false)
-	private String cha_titulo;
+	private String chaTitulo;
 	@Column(name="cha_descricao", length=200, nullable = false)
-	private String cha_descricao;
+	private String chaDescricao;
+	public Long getUsuId() {
+		return usuId;
+	}
+	public void setUsuId(Long usuId) {
+		this.usuId = usuId;
+	}
+	public Long getEmpId() {
+		return empId;
+	}
+	public void setEmpId(Long empId) {
+		this.empId = empId;
+	}
+	public Long getCatId() {
+		return catId;
+	}
+	public void setCatId(Long catId) {
+		this.catId = catId;
+	}
+	public Long getSubId() {
+		return subId;
+	}
+	public void setSubId(Long subId) {
+		this.subId = subId;
+	}
+	public String getChaTitulo() {
+		return chaTitulo;
+	}
+	public void setChaTitulo(String chaTitulo) {
+		this.chaTitulo = chaTitulo;
+	}
+	public String getChaDescricao() {
+		return chaDescricao;
+	}
+	public void setChaDescricao(String chaDescricao) {
+		this.chaDescricao = chaDescricao;
+	}
 	
-	public String getUsu_nome() {
-		return usu_nome;
-	}
-	public void setUsu_nome(String usu_nome) {
-		this.usu_nome = usu_nome;
-	}
-	public Long getEmp_id() {
-		return emp_id;
-	}
-	public void setEmp_id(Long emp_id) {
-		this.emp_id = emp_id;
-	}
-	public Long getCat_id() {
-		return cat_id;
-	}
-	public void setCat_id(Long cat_id) {
-		this.cat_id = cat_id;
-	}
-	public Long getSub_id() {
-		return sub_id;
-	}
-	public void setSub_id(Long sub_id) {
-		this.sub_id = sub_id;
-	}
-	public String getCha_titulo() {
-		return cha_titulo;
-	}
-	public void setCha_titulo(String cha_titulo) {
-		this.cha_titulo = cha_titulo;
-	}
-	public String getCha_descricao() {
-		return cha_descricao;
-	}
-	public void setCha_descricao(String cha_descricao) {
-		this.cha_descricao = cha_descricao;
-	}
 	
-
 	
 	
 }

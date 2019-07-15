@@ -17,6 +17,9 @@
 <!----------------------------------------------------------->
 <!-- SweetAlert2 -->
 <script src="resources/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+<link rel="stylesheet" href="resources/sweetalert2/dist/sweetalert2.min.css">
+
 <!-- ---Sumernote Richtext Editor -->
 <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css" rel="stylesheet">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.js"></script>
